@@ -1,0 +1,31 @@
+///
+
+ ./mvnw spring-boot:build-image "-Dspring-boot.build-image.imageName=newman234/jobappimage" 
+
+///
+    docker login
+    docker push newman234/jobappimage
+    docker images
+    docker ps
+    docker run -p 8080:8080 newman234/jobappimage
+
+
+#Post gre SQL command
+///
+     docker run -d --name db -e POSTGRES_PASSWORD=amarendra postgres
+     docker ps
+     docker run -d --name pgadmin -e PGADMIN_DEFAULT_EMAIL=user@domain.com -e PGADMIN_DEFAULT_PASSWORD=amarendra dpage/pgadmin4
+
+    docker exec -it pgadmin ping db
+    docker rm -f db pgadmin
+
+   Using Networks
+   docker run -d --name db --network my-network -e POSTGRES_PASSWORD=mysceretpassword postgres
+
+   docker run -d --name pgadmin --network my-netowk -e
+   PGADMIN_DEFAULT_EMAIL=user@domain.com -e PGADMIN_DEFAULT_PASSWORD=superSecret dppage/pgadmin4
+   docker exec -it pgadmin ping db
+
+
+
+///
