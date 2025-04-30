@@ -16,7 +16,7 @@
      docker ps
      docker run -d --name pgadmin -e PGADMIN_DEFAULT_EMAIL=user@domain.com -e PGADMIN_DEFAULT_PASSWORD=amarendra dpage/pgadmin4
 
-    docker exec -it pgadmin ping db
+    docker exec -it pgadmin ping db  => check netowk reachbility in same netwokk
     docker rm -f db pgadmin
 
    Using Networks
